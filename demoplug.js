@@ -66,16 +66,20 @@ class DemoPlug {
         transition: 'bottom .4s ease-in-out'
       }
     }
-    const crossAttributes = {
-      className: 'cross',
+    const closeAttributes = {
+      className: 'close_message_window',
       style: {
-        position: 'absolute',
-        top: '5px',
-        right: '5px'
+        position: 'relative',
+        right: '5px',
+        background: 'white',
+        borderRadius: '3px',
+        border: '1px solid #ededed',
+        padding: '5px',
+        textAlign: 'center',
+        cursor: 'pointer'
       },
-      // dangerouslySetInnerHTML: { __html:  }
     }
-    return this.h('div', attributes, [this.h('div', crossAttributes, '&#215;')])
+    return this.h('div', attributes, [this.h('div', closeAttributes, 'Close Window')])
   }
 
   formTree = () => {
